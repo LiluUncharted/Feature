@@ -28,19 +28,19 @@
 <form action="/action_page.php">
  <div class="border">
     <label for="fname">First Name:</label>
-  <input type="text" id="fname" name="fname" placeholder="Smith"><br><br>
+  <input type="text" id="fname" name="fname" placeholder="Smith" required><br><br>
   <label for="lname">Last name:</label>
-  <input type="text" id="lname" name="lname" placeholder="Ben"><br><br>
+  <input type="text" id="lname" name="lname" placeholder="Ben" required><br><br>
 
   <label for="email">Email:</label>
-  <input type="email" id="email" name="email" placeholder="name@gmail.com"><br><br>
+  <input type="email" id="email" name="email" placeholder="name@gmail.com" pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" required><br><br>
 
   <label for="username">User Name:</label>
   <input type="text" id="username" name="username" placeholder="SmithB"><br><br>
   <label for="pwd">Password:</label>
-  <input type="password" id="pwd" name="pwd" placeholder="Password"><br><br>
+  <input type="password" id="pwd" name="pwd" placeholder="Password" required><br><br>
   <label for="confirm-pwd">Confirm password:</label>
-  <input type="password" id="confirm-pwd" name="pwd" placeholder="Confirm password"><br><br>
+  <input type="password" id="confirm-pwd" name="pwd" placeholder="Confirm password" required><br><br>
 
   <label for="gender">Gender:</label>
   <input type="radio" id="gender" name="gender" value="male">
@@ -96,7 +96,7 @@
 <h2>Profile Picture:</h2>
 <div class="border">
   <label for="addfile">Upload Profile Picture:</label>
-  <input type="file" id="addfile" name="addfile" placeholder="Choose File">
+  <input type="file" accept=".jpg,.png" id="addfile" name="addfile" placeholder="Choose File">
 </div>
 
 <h2>Additional Details:</h2>
