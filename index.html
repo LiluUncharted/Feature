@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <title>Homework6</title>
         <style>
@@ -25,7 +25,7 @@
           <h1 style="padding-left:20px;">Registration Form</h1>
         <h2>Basic User Information</h2>
 
-<form action="/action_page.php">
+<form action="/action_page.php" method="get">
  <div class="border">
     <label for="fname">First Name:</label>
   <input type="text" id="fname" name="fname" placeholder="Smith" required><br><br>
@@ -42,13 +42,13 @@
   <label for="confirm-pwd">Confirm password:</label>
   <input type="password" id="confirm-pwd" name="pwd" placeholder="Confirm password" required><br><br>
 
-  <label for="gender">Gender:</label>
-  <input type="radio" id="gender" name="gender" value="male">
-  <label for="gender">Male</label>
-  <input type="radio" id="gender" name="gender" value="female">
-  <label for="gender">Female</label>
-  <input type="radio" id="gender" name="gender" value="other">
-  <label for="gender">Other</label><br><br>
+  <label for="male">Gender:</label>
+  <input type="radio" id="male" name="gender" value="male">
+  <label for="male">Male</label>
+  <input type="radio" id="female" name="gender" value="female">
+  <label for="female">Female</label>
+  <input type="radio" id="other" name="gender" value="other">
+  <label for="other">Other</label><br><br>
 
   <label for="birthday">Birthday:</label>
   <input type="date" id="birthday" name="birthday">
@@ -76,7 +76,7 @@
   <input type="number" id="quantity" name="quantity" placeholder="1080"><br><br>
 
   <label for="phonenumber">Phone Number:</label>
-  <input type="tel" id="phonenumber" name="phonenumber" placeholder="+1 (000) 000-0000">
+  <input type="tel" id="phonenumber" name="phonenumber" placeholder="+1 000 000-0000">
 </div>
 
 <h2>Preferences</h2>
@@ -93,10 +93,14 @@
   <input type="color" id="favcolor" name="favcolor" value="#1D859A">
 </div>
 
-<h2>Profile Picture:</h2>
+<h2>Profile:</h2>
 <div class="border">
   <label for="addfile">Upload Profile Picture:</label>
-  <input type="file" accept=".jpg,.png" id="addfile" name="addfile" placeholder="Choose File">
+  <input type="file" accept=".jpg,.png" id="addfile" name="addfile"><br><br>
+
+  <label for="website">Website URL:</label>
+  <input type="url" id="website" name="website" placeholder="www.website.com">
+
 </div>
 
 <h2>Additional Details:</h2>
@@ -110,7 +114,14 @@
   </select><br><br>
 
   <label for="feedback">Feedback/Comments:</label><br>
-  <textarea name="feedback" id="feedback" rows="3" cols="30" placeholder="Best UI/UX"></textarea>
+  <textarea name="feedback" id="feedback" rows="3" cols="30" placeholder="Best UI/UX"></textarea><br><br>
+
+  <label for="experience">My experience level with HTML, ranging from 1 (Begginer) to 10(Expert):</label><br>
+  <input type="range" id="experience" name="experience" min="0" max="10" oninput="displayValue.innerText=this.value">
+  <p id="displayValue"></p>
+  
+  
+  
 </div>
 
 <div class="button">
