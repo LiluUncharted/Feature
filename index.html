@@ -3,46 +3,140 @@
     <head>
         <title>Homework6</title>
         <style>
-        .border {
+        
+        .border 
+        {
+          border-color: #1D859A;
+          border-width: 1px;
           border-radius: 5px;
-          padding:10px 0px 10px 20px;
+          padding:20px;
           margin:10px 10px 20px 7px;
-          background-color: rgb(236, 236, 236);
+          width: 500px;
         }
 
-          h2{
-          padding:15px 0px 0px 20px;
+        legend 
+        {
+          font-family: "Forms", Helvetica, Arial, sans-serif;  
+          font-size: 1.5em;
+          color: #1D859A;
         }
 
-          .button {
-          padding-left:20px;
-        } 
+     
+
+        input[type=text], 
+        select, 
+        input[type=email], 
+        input[type=password], 
+        input[type=date],
+        textarea,
+        input[type=number],
+        input[type=tel],
+        input[type=url]
+        {
+          width: 100%;
+         padding: 12px 20px;
+        margin: 5px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        }
+
+
+        input[type=submit]
+        {
+              color: white;
+              width: 100px;
+              border-radius: 0.3em;
+              padding: 8px;
+              margin-left: 10px;
+              text-align: center;
+              background-color: #1D859A;
+              border: none;
+              cursor: pointer;
+        }
+
+
+        input[type=submit]:hover
+        {
+          background-color:#2bc6e6 ;
+          transition-duration: 0.4s;
+        }
+
+
+        input[type=reset]
+        {
+            color: white;
+              width: 100px;
+              border-radius: 0.3em;
+              padding: 8px;
+              margin-left: 10px;
+              text-align: center;
+              background-color: #373e3f;
+              border: none;
+              cursor: pointer;
+        }
+
+        input[type=reset]:hover
+        {
+          background-color:#738183;
+          transition-duration: 0.4s;
+        }
+
+
+
+
+        input[type='range'] {
+      overflow: hidden;
+      width: 100px;
+      -webkit-appearance: none;
+      background-color:#d1d1d1;
+      border-radius: 50px;
+    }
+    
+    input[type='range']::-webkit-slider-runnable-track {
+      height: 10px;
+      -webkit-appearance: none;
+      color: #1D859A;
+      margin-top: -1px;
+      
+    }
+    
+    input[type='range']::-webkit-slider-thumb {
+      width: 20px;
+      -webkit-appearance: none; 
+      height: 20px;
+      cursor:grab;
+      background: #1D859A;
+      box-shadow: -80px 0 0 80px #1D859A;
+    }
+      
+
         </style>
     </head>
 
     <body>
       
-          <h1 style="padding-left:20px;">Registration Form</h1>
-        <h2>Basic User Information</h2>
+          <h1 style="padding-left:20px; color: #1D859A;">Registration Form</h1>
+
 
 <form action="/action_page.php" method="get">
- <div class="border">
-    <label for="fname">First Name:</label>
-  <input type="text" id="fname" name="fname" placeholder="Smith" required><br><br>
-  <label for="lname">Last name:</label>
-  <input type="text" id="lname" name="lname" placeholder="Ben" required><br><br>
+ <fieldset class="border">
+  <legend>Basic User Information</legend>
+    <label for="fname">Full Name:</label><br>
+  <input type="text" id="fname" name="fname" placeholder="Smith Ben" required><br><br>
 
-  <label for="email">Email:</label>
+  <label for="email">Email:</label><br>
   <input type="email" id="email" name="email" placeholder="name@gmail.com" pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" required><br><br>
 
-  <label for="username">User Name:</label>
+  <label for="username">User Name:</label><br>
   <input type="text" id="username" name="username" placeholder="SmithB"><br><br>
-  <label for="pwd">Password:</label>
+  <label for="pwd">Password:</label><br>
   <input type="password" id="pwd" name="pwd" placeholder="Password" required><br><br>
-  <label for="confirm-pwd">Confirm password:</label>
+  <label for="confirm-pwd">Confirm password:</label><br>
   <input type="password" id="confirm-pwd" name="pwd" placeholder="Confirm password" required><br><br>
 
-  <label for="male">Gender:</label>
+  <label for="male">Gender:</label><br>
   <input type="radio" id="male" name="gender" value="male">
   <label for="male">Male</label>
   <input type="radio" id="female" name="gender" value="female">
@@ -50,18 +144,20 @@
   <input type="radio" id="other" name="gender" value="other">
   <label for="other">Other</label><br><br>
 
-  <label for="birthday">Birthday:</label>
+  <label for="birthday">Date of Birth:</label><br>
   <input type="date" id="birthday" name="birthday">
-</div>
 
-<h2>Address Information</h2>
-<div class="border">
+ </fieldset>
+
+
+<fieldset class="border">
+  <legend>Address Information</legend>
   <label for="message">Street Address:</label><br>
   <textarea name="message" id="message" rows="3" cols="30" placeholder="1080 5Avenue"></textarea><br><br>
 
-  <label for="country">Country:</label>
+  <label for="country">Country:</label><br>
   <select id="country" name="country">
-    <option value="" disabled selected>Choose country</option>
+    <option value="" disabled selected>USA</option>
     <option value="usa">USA</option>
     <option value="uk">UK</option>
     <option value="germany">Germany</option>
@@ -69,45 +165,50 @@
     <option value="italy">Italy</option>
   </select><br><br>
 
-  <label for="city">City:</label>
+  <label for="city">City:</label><br>
   <input type="text" id="city" name="city" placeholder="Manhattan"><br><br>
 
-  <label for="quantity">Postal Code:</label>
+  <label for="quantity">Postal Code:</label><br>
   <input type="number" id="quantity" name="quantity" placeholder="1080"><br><br>
 
-  <label for="phonenumber">Phone Number:</label>
+  <label for="phonenumber">Phone Number:</label><br>
   <input type="tel" id="phonenumber" name="phonenumber" placeholder="+1 000 000-0000">
-</div>
 
-<h2>Preferences</h2>
-<div class="border">
-  <label for="preferences">Preferred Contact Method:</label>
+</fieldset>
+
+
+<fieldset class="border">
+  <legend>Preferences</legend>
+  <label for="preferences">Preferred Contact Method:</label><br><br>
   <input type="checkbox" id="preferences" name="preferences" value="email">
   <label for="preferences">Email</label>
   <input type="checkbox" id="preferences2" name="preferences2" value="phone">
   <label for="preferences2">Phone</label>
   <input type="checkbox" id="preferences3" name="preferences3" value="postal-mail">
-  <label for="preferences3">Postal Mail</label><br>
+  <label for="preferences3">Postal Mail</label><br><br>
 
   <label for="favcolor">Favorite Colour:</label>
   <input type="color" id="favcolor" name="favcolor" value="#1D859A">
-</div>
 
-<h2>Profile:</h2>
-<div class="border">
+</fieldset>
+
+
+<fieldset class="border">
+  <legend>Profile</legend>
   <label for="addfile">Upload Profile Picture:</label>
   <input type="file" accept=".jpg,.png" id="addfile" name="addfile"><br><br>
 
-  <label for="website">Website URL:</label>
+  <label for="website">Website URL:</label><br>
   <input type="url" id="website" name="website" placeholder="www.website.com">
 
-</div>
+</fieldset>
 
-<h2>Additional Details:</h2>
-<div class="border">
-  <label for="details">How did you hear about us?</label>
+
+<fieldset class="border">
+  <legend>Additional Details</legend>
+  <label for="details">How did you hear about us?</label><br>
   <select id="details" name="details">
-    <option value="" disabled selected>Choose one</option>
+    <option value="" disabled selected>Internet</option>
     <option value="internet">Internet</option>
     <option value="friend">Friend</option>
     <option value="advertisement">Advertisement</option>
@@ -116,18 +217,16 @@
   <label for="feedback">Feedback/Comments:</label><br>
   <textarea name="feedback" id="feedback" rows="3" cols="30" placeholder="Best UI/UX"></textarea><br><br>
 
-  <label for="experience">My experience level with HTML, ranging from 1 (Begginer) to 10(Expert):</label><br>
-  <input type="range" id="experience" name="experience" min="0" max="10" oninput="displayValue.innerText=this.value">
-  <p id="displayValue"></p>
+  <label for="experience">Experience level with HTML:</label>
+  <input type="range" id="experience" name="experience" min="1" max="10" oninput="displayValue.value=experience.value">
+  <output id="displayValue">5</output> / 10
   
   
-  
-</div>
+</fieldset>
 
-<div class="button">
+
 <input type="submit" value="Submit">
 <input type="reset" value="Reset">
-</div>
 
 </form>    
     </body>
